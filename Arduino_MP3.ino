@@ -32,30 +32,9 @@ void setup () {
 
 
 void loop () { 
-  
-  if( (digitalRead(buttonPause) == LOW)) {
-    Serial.println("door is closed"); 
- 
-    if(isPlaying) {
-      pause();
-      isPlaying = false;
-    }
-    delay(20);
-  }
-  
-  if( (digitalRead(buttonPause) == HIGH)) {
-    Serial.println("door is opened"); 
-
-    if (isPlaying == false) {
-      play();
-      isPlaying = true;
-    }
-    delay(20); 
-  }
-
-  delay(100);
 
 }
+
 
 void playFirst() {
   execute_CMD(0x3F, 0, 0);

@@ -22,7 +22,7 @@ void setup () {
   digitalWrite(buttonPause,HIGH);
   
   mySerial.begin(9600);
-  delay(1000);
+  delay(250);
   playFirst();
   isPlaying = true;
 
@@ -38,9 +38,9 @@ void loop () {
 
 void playFirst() {
   execute_CMD(0x3F, 0, 0);
-  delay(500);
+  delay(200);
   setVolume(5);
-  delay(1000);
+  delay(200);
   execute_CMD(0x11,0,1); 
   delay(10);
 }
